@@ -69,7 +69,7 @@ class UserManager{
             getline(cin,name);
             cout<<"\t\t Enter Password : ";
             cin>>pass;
-       for(int i=0;i<user.size();i++){
+       for(int i=0;i<static_cast<int>(user.size());i++){
         if(name==user[i].getName() && pass==user[i].getPassword()){
             cout<<"\n\t\t ......Login Successful!!!!......"<<endl<<endl;
             return true;
@@ -83,7 +83,7 @@ class UserManager{
         bool t = LoginUser();
         if(t){
             cout<<"\t\t List of User are as follow "<<endl;
-            for(int i=0;i<user.size();i++){
+            for(int i=0;i<static_cast<int>(user.size());i++){
                 cout<<"\n\t\t\t"<<i+1<<"."<<user[i].getName();
             }
             cout<<endl<<endl;
@@ -94,7 +94,7 @@ class UserManager{
     }
     void searchUser(string username){ 
         int count =0,t;
-          for(int i=0;i<user.size();i++){
+          for(int i=0;i<static_cast<int>(user.size());i++){
             if(user[i].getName()==username){
                 count++; 
                t=i;  
@@ -124,7 +124,7 @@ class UserManager{
     }
     bool deleteUser(string username){
        
-        for(int i=0;i<user.size();i++){
+        for(int i=0;i<static_cast<int>(user.size());i++){
             if(user[i].getName()==username){
                 string pass;
                 cout<<"\t\tUser Found. Enter password to confirm delete. ";

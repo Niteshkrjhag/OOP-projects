@@ -3,7 +3,6 @@
 #include <iomanip>
 #include <cctype>
 #include <string>
-
 using namespace std;
 
 class Student{
@@ -40,8 +39,6 @@ class Student{
     }
 };
 // function to capitalizing the First letter in name;
-
-
 string capitalize(const string &name){
     string capital;
     bool c = true;
@@ -59,11 +56,7 @@ string capitalize(const string &name){
     return capital;
 }
 
-
-
 // checking whether the name that is input is valid or not;
-
-
 bool validName(const string &name){
     for(char c:name){
         if(!isalpha(c)&& c!=' '){
@@ -72,10 +65,6 @@ bool validName(const string &name){
     }
     return true;
 }
-
-
-
-
 // Creating a Function to Update student
 
 void updateStudent(vector<Student> &student){
@@ -138,9 +127,6 @@ void updateStudent(vector<Student> &student){
     }
      
 }
-
-
-
 // Create Function to add new student
 
 void addNewStudent(vector<Student> &students){
@@ -237,7 +223,6 @@ void deleteStudent(vector<Student> &student){
 int main(){
     vector<Student> students;
     char choice;
-   
    do{
    int op;
     system("clear");
